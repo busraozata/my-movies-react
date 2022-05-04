@@ -155,7 +155,7 @@ class App extends React.Component {
             <div className="container">
                 <Routes>
                     <Route path="/" element={
-                        <div>
+                        <React.Fragment>
                             <div className="row">
                                 <div className="col-lg-12">
                                     <SearchBar searchMovieProp={this.searchMovie} />
@@ -168,7 +168,7 @@ class App extends React.Component {
                                 deleteMovieProp={this.deleteMovie}
                             />
 
-                        </div>
+                        </React.Fragment>
                     }
                     />
                     <Route path="/add" element={<AddMovie />} />
