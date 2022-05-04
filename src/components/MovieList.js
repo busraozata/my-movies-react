@@ -13,7 +13,7 @@ const MovieList = (props) => {
                 {props.movies.map((movie) => (
                     <div className="col-lg-4" key={movie.id}>
                         <div className="card mb-4 shadow-sm">
-                            <img src={movie.imageURL} className="card-img-top img-fluid" alt="Sample Movie" />
+                            <img src={movie.imageURL} /* {`https://www.themoviedb.org/t/p/w440_and_h660_face/${movie.poster_path}`} */ className="card-img-top img-fluid" alt="Sample Movie" />
                             <div className="card-body">
                                 <h5 className="Card Title">{movie.name}</h5>
                                 <p>{movie.overview}</p>
