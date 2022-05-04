@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import MovieList from './MovieList';
 import axios from "axios";
 import AddMovie from "./AddMovie";
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes, BrowserRouter } from 'react-router-dom';
 
 require('dotenv').config()
 
@@ -153,20 +153,24 @@ class App extends React.Component {
 
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <SearchBar searchMovieProp={this.searchMovie} />
-                    </div>
-                </div>
-
-
-                <MovieList
-                    movies={filteredMovies}
-                    deleteMovieProp={this.deleteMovie}
-                />
-
                 <Routes>
-                    <Route path="/add" element={<AddMovie />} />
+                    <Route path="/" element={
+                        <div>
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <SearchBar searchMovieProp={this.searchMovie} />
+                                </div>
+                            </div>
+
+
+                            <MovieList
+                                movies={filteredMovies}
+                                deleteMovieProp={this.deleteMovie}
+                            />
+
+                        </div>
+                    }
+                    />
                     <Route path="/add" element={<AddMovie />} />
                 </Routes>
             </div>
