@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     /* state = {
@@ -21,12 +22,12 @@ class SearchBar extends React.Component {
                            /*  value={this.state.searchQuery} */ />
                         </div>
                         <div className="col-lg-2"  style={{ textAlign:'end' }}>
-                            <button
+                            <Link
                                 type="button"
                                 className="btn btn-md btn-danger"
-                               
+                                to="/add"
                                 >Add Movie
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
